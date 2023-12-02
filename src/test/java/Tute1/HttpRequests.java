@@ -33,7 +33,7 @@ public class HttpRequests {
                 .contentType("application/json")
                 .body(data)
             .when()
-                .post("https://reqres.in/api/users ")
+                .post("https://reqres.in/api/users")
                 .jsonPath().getInt("id");
     }
 
