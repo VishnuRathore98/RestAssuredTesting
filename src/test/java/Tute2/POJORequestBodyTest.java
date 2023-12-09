@@ -1,9 +1,10 @@
 package Tute2;
 
 import org.testng.annotations.Test;
-import static io.restassured.RestAssured.*;
 
-public class POJORequestBody {
+import static io.restassured.RestAssured.given;
+
+public class POJORequestBodyTest {
     int id;
     @Test(priority = 1)
     void createUser(){

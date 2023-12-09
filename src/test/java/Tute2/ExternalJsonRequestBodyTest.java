@@ -10,7 +10,7 @@ import java.io.FileReader;
 
 import static io.restassured.RestAssured.given;
 
-public class ExternalJsonRequestBody {
+public class ExternalJsonRequestBodyTest {
     int id;
     @Test(priority = 1)
     void createUser() throws FileNotFoundException {
