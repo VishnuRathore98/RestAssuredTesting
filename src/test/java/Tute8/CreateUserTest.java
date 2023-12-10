@@ -13,14 +13,15 @@ public class CreateUserTest {
     @Test
     void testCreateUser(ITestContext context){
         Faker faker = new Faker();
-
+        System.out.println("===> Creating new User ...");
         JSONObject data = new JSONObject();
         data.put("name",faker.name().fullName());
         data.put("gender","Male");
         data.put("email",faker.internet().emailAddress());
         data.put("status","inactive");
 
-        String bearerToken = "enter bearer token here";//Get this bearer token
+        String bearerToken = "98e81ac7b5015bd54b483cd742fc2cfb02a5418b90db0e12eb746d413bca6121";//Get this bearer token
+
         int id = given()
             .headers("Authorization","Bearer "+bearerToken)
             .contentType("application/json")
@@ -32,6 +33,7 @@ public class CreateUserTest {
         //For making variable available to single test class.
         context.setAttribute("user_id",id);
         //For making variable available to whole test suite.
-        context.getSuite().setAttribute("user_id",id);
+//        context.getSuite().setAttribute("user_id",id);
+        System.out.println("===> User "+data.getString("name")+" created successfully.");
     }
 }

@@ -1,0 +1,12 @@
+<!--<?XML version = "1.0" encoding = "UTF-8" ?>-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+<test name="MyTest">
+    <classes>
+        <class name = "Tute8.CreateUserTest"/>
+        <class name = "Tute8.GetUserTest"/>
+        <class name = "Tute8.UpdateUserTest"/>
+        <class name = "Tute8.DeleteUserTest"/>
+    </classes>
+</test>
+</suite>
